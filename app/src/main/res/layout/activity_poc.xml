@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P2P半双工对讲"
+        android:textSize="26dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="频道1"
+        android:textSize="13dp"
+        android:layout_gravity="center"
+        />
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    />
+
+    <Button
+        android:id="@+id/talkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按下讲话"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>

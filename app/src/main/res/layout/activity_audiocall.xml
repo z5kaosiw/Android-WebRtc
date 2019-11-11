@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_main_bg_dark" >
+
+    <RelativeLayout
+        android:id="@+id/audio_call_top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!-- 手机号 -->
+
+        <TextView
+            android:id="@+id/audio_call_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:text="12345678"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <!-- 状态 -->
+
+        <TextView
+            android:id="@+id/audio_call_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/audio_call_number"
+            android:layout_marginRight="10dp"
+            android:text="@string/union_audio_incall"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+        <!-- 通话时长 -->
+
+        <TextView
+            android:id="@+id/audio_call_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/audio_call_info"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="00:00"
+            android:visibility="invisible"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/audio_call_speak_bt"
+        android:layout_width="280px"
+        android:layout_height="280px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/re_audio_center_bg"
+        android:visibility="invisible" />
+    <!-- 参加会议人数 -->
+
+    <TextView
+        android:id="@+id/audio_call_person_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/audio_bottom_panel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="参加会议人数"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/poc_room_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/audio_call_person_sum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="空闲"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <!-- 底部操作部分 -->
+
+    <LinearLayout
+        android:id="@+id/audio_bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/audio_call_hangup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 静音 -->
+
+        <Button
+            android:id="@+id/audio_call_mute_btn"
+            android:layout_width="110dip"
+            android:layout_height="110dip"
+            android:layout_marginRight="10dp"
+            android:onClick="controlMic"
+            android:background="@drawable/union_audio_mic_closed" />
+
+        <!-- 免提 -->
+
+        <Button
+            android:id="@+id/audio_call_handsfree_btn"
+            android:layout_width="110dip"
+            android:layout_height="110dip"
+            android:layout_marginLeft="10dp"
+            android:onClick="controlSpeeker"
+            android:background="@drawable/union_speeker_closed" />
+
+        <!-- 保持 -->
+
+        <Button
+            android:id="@+id/audio_call_hold_btn"
+            android:layout_width="160dip"
+            android:layout_height="87dip"
+            android:layout_marginLeft="1dp"
+            android:visibility="gone"
+            android:background="@drawable/re_audio_hold_on_bg" />
+        <!-- 挂断 -->
+    </LinearLayout>
+    <Button
+        android:id="@+id/audio_call_hangup"
+        android:layout_width="140dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:text="@string/hangup"
+        android:onClick="endAudioCall"
+        android:background="@drawable/re_red_shape_bg"/>
+    <TextView
+        android:id="@+id/LogcatView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="日志:"
+        android:layout_marginTop="60dp"
+        />
+</RelativeLayout>

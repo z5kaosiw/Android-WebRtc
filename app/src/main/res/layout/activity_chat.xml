@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="- 聊 天 室 -"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/rommID"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="房间号:"
+            android:textSize="15dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/gray"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/msgTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         />
+
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        android:background="@color/gray"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/sendMsg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:onClick="sendMsg"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

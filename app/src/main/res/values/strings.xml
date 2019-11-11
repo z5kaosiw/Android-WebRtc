@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">RealTimeIm</string>
+    <string name="join_room">1v1视频房间</string>
+    <string name="join_audioroom">1v1语音房间</string>
+    <string name="join_chatroom">聊天室</string>
+    <string name="settings">设置</string>
+    <string name="room_tips">请输入房间ID: </string>
+    <string name="addre_tips">服务器地址: </string>
+    <string name="server_tips">Input server addr: </string>
+    <string name="default_server">https://www.youdutech.com</string>
+    <string name="IP">47.99.207.177</string>
+
+    <string name="client_status_online">在线</string>
+    <string name="client_status_offline">离线</string>
+    <string name="client_status_conneting">正在连接</string>
+    <string name="hangup">挂断</string>
+    <string name="union_audio_incall">通话中</string>
+
+    <string name="webrtc_chat_mute">静音</string>
+    <string name="webrtc_chat_hands_free">免提</string>
+    <string name="webrtc_chat_refuse">拒接</string>
+    <string name="webrtc_chat_answer">接听</string>
+    <string name="webrtc_chat_hang_up">挂断</string>
+    <string name="webrtc_switch_voice">切到语音</string>
+    <string name="webrtc_switch_camera">切换摄像头</string>
+    <string name="webrtc_close_camera">关闭摄像头</string>
+    <string name="webrtc_open_camera">开启摄像头</string>
+
+    <string name="ptt_1">按下讲话</string>
+    <string name="ptt_2">松开停止</string>
+    <string name="ptt_3">请求对讲</string>
+    <string name="ptt_4">远方对讲</string>
+
+</resources>
